@@ -11,7 +11,7 @@
 					<div class="col-xl-10 col-xxl-9">
 						<div class="row">
 							<div class="col-sm-6 col-md-3 mb-4 mb-md-0 text-center" v-for="(event, index) in events.metadata.icons" :key="index">
-								<nuxt-link class="d-inline-block opacity-0 animated" :to="`${event.slug}`">
+								<nuxt-link class="d-inline-block opacity-0 animated" :to="`/${event.slug}`">
 									<span class="icon position-relative d-flex justify-content-center align-items-center rounded-circle mx-auto animated scale">
 										<i class="bi bi-camera-reels-fill" v-if="event.slug === 'provoles'"></i>
 										<i class="bi bi-puzzle-fill" v-if="event.slug === 'paixnidi'"></i>

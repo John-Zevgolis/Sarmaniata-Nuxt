@@ -63,14 +63,18 @@ export default {
 	},
 	head() {
 		return {
-			titleTemplate: `%s | ${this.title}`,
+			titleTemplate: `Sarmaniata | ${this.title}`,
 			meta: [
 				{
-					property: 'og:url', 
+					property: 'og:url'
 				},
 				{
 					property: 'og:title', 
 					content: 'Sarmaniata | Άλλες Εκδηλώσεις'
+				},
+				{
+					property: "og:type",
+					content: "website"
 				},
 				{
 					property: 'og:description', 
@@ -78,7 +82,15 @@ export default {
 				},
 				{	
 					property: 'og:image', 
-					content: 'https://sarmaniata.gr/winter.jpg'
+					content: 'http://sarmaniata.gr/winter.jpg'
+				},
+				{
+					property: 'og:image:width',
+					content: '600'
+				},
+				{
+					property: 'og:image:height',
+					content: '315'
 				},
 				{
 					property: 'og:image:alt', 
@@ -109,7 +121,7 @@ export default {
 				},
 				{
 					property: 'twitter:image',
-					content: 'https://sarmaniata.gr/winter.jpg'
+					content: 'http://sarmaniata.gr/winter.jpg'
 				}
 			]
 		};

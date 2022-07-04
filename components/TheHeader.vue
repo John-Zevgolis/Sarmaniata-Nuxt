@@ -85,7 +85,7 @@ export default {
 				this.handleResize(); 
 				const interval = setInterval(() => {
 					if(this.$refs.header) {
-						bus.$emit('header-height', this.$refs.header.offsetHeight);
+						(this.$nuxt || EventBus || this.$EventBus).$emit('header-height', this.$refs.header.offsetHeight);
 						clearInterval(interval);
 					}
 				}, 50);

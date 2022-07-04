@@ -1,9 +1,9 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Sarmaniata',
     htmlAttrs: {
-      lang: 'el'
+      lang: 'el',
+      prefix: 'og: http://ogp.me/ns#'
     },
     meta: [
       { charset: 'utf-8' },
@@ -76,9 +76,10 @@ export default {
     '@nuxtjs/google-gtag',
     '@nuxtjs/axios'
   ],
+
   'google-gtag': {
     id: 'G-277J88E107',
-    debug: true,
+    debug: true
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -88,6 +89,11 @@ export default {
 
   router: {
     linkActiveClass: 'active',
-    linkExactActiveClass: 'active'
+    linkExactActiveClass: 'active',
+    base: process.env.BASE_URL
+  },
+
+  axios: {
+    baseURL: '/'
   }
 }

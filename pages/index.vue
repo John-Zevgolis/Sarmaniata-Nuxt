@@ -37,13 +37,19 @@ export default {
 		};
 	},
 	head: {
+		title: 'Sarmaniata',
 		meta: [
 			{
 				property: 'og:url',
+				content: 'https://sarmaniata.gr'
 			},
 			{
 				property: 'og:title', 
 				content: 'Sarmaniata'
+			},
+			{
+				property: "og:type",
+				content: "website"
 			},
 			{
 				property: 'og:description', 
@@ -51,7 +57,15 @@ export default {
 			},
 			{	
 				property: 'og:image', 
-				content: 'https://sarmaniata.gr/sarmaniata.jpg'
+				content: 'http://sarmaniata.gr/sarmaniata.jpg'
+			},
+			{
+				property: 'og:image:width',
+				content: '600'
+			},
+			{
+				property: 'og:image:height',
+				content: '315'
 			},
 			{
 				property: 'og:image:alt', 
@@ -78,11 +92,12 @@ export default {
 				content: 'Ομάδα για τη φύση και τον πολιτισμό της Σαμαρίνας'
 			},
 			{
-				property: 'twitter:url'
+				property: 'twitter:url',
+				content: 'https://sarmaniata.gr'
 			},
 			{
 				property: 'twitter:image',
-				content: 'https://sarmaniata.gr/sarmaniata.jpg'
+				content: 'http://sarmaniata.gr/sarmaniata.jpg'
 			}
 		]
 	},

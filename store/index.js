@@ -1,3 +1,4 @@
+import { EventBus } from '../plugins/v-event-bus.js';
 const Cosmic = require('cosmicjs');
 const api = Cosmic();
 const bucket = api.bucket({
@@ -100,7 +101,7 @@ export const actions = {
 		this.$axios.post('/process.php', data).then(res => res.data, err => console.log(err.message))
 		.then(res => {
 			commit('saveResponse', res);
-			if(res.status === 'success') bus.$emit('resetForm');
+			if(res.status === 'success') (window.$nuxt || EventBus || this.$EventBus).$emit('resetForm');
 		})
 		.catch(err => console.log(err.message));
 	},
@@ -112,7 +113,7 @@ export const actions = {
 		this.$axios.post('/registration.php', data).then(res => res.data, err => console.log(err.message))
 		.then(res => {
 			commit('saveRegistration', res);
-			if(res.status === 'success') bus.$emit('resetRegistrationForm');
+			if(res.status === 'success') (window.$nuxt || EventBus || window.$EventBus).$emit('resetRegistrationForm');
 		})
 		.catch(err => console.log(err.message));
 	}

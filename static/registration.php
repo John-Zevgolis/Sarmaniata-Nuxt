@@ -28,7 +28,16 @@ if (empty($phone)) {
 
     $formerrors=true;
 
-} else if(strlen($phone) < 10 || strlen($phone) > 10) {
+} else if(!is_numeric($phone)) {
+
+    array_push($errors, (object)[
+        "field" => "phone",
+        "text" => "Μη επιτρεπόμενοι χαρακτήρες. Επιτρέπονται μόνο αριθμοί",
+    ]);
+
+    $formerrors=true;
+
+} else if((is_numeric($phone) && strlen($phone) < 10) || (is_numeric($phone) && strlen($phone) > 10)) {
 
     array_push($errors, (object)[
         "field" => "phone",
@@ -81,7 +90,7 @@ if (!$formerrors) {
     $body="Στοιχεια επισκέπτη \n";
     $body.="Ονομα: $name \n";
     $body.="Τηλέφωνο: $phone \n";
-    $body.="Αριθμός ατόμων: $members \n";
+    $body.="Αριθμός Ατόμων: $members \n";
 
     $r=mail($to,$subject,$body,$headers);
 

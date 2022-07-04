@@ -477,7 +477,6 @@ export default {
 			if(this.$refs.Map) {
 				this.$refs.Map.$mapPromise.then(() => {
 					this.bounds = new this.google.maps.LatLngBounds();
-					console.log(this.locations)
 					this.locations.map(marker => {
 						const loc = new this.google.maps.LatLng(marker.lat, marker.lon);
 						this.bounds.extend(loc);

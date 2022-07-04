@@ -29,7 +29,7 @@
 									<nuxt-link to="/" exact class="d-block bg-transparent menu-link position-relative">ΑΡΧΙΚΗ</nuxt-link>
 								</li>
 								<li v-for="(event, index) in events.metadata.icons" :key="index">
-									<nuxt-link :to="`${event.slug}`" class="d-block bg-transparent menu-link position-relative">{{event.title}}</nuxt-link>
+									<nuxt-link :to="`/${event.slug}`" class="d-block bg-transparent menu-link position-relative">{{event.title}}</nuxt-link>
 								</li>
 								<li class="d-lg-none mt-3">
 									<nav class="social">

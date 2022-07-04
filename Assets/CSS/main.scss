@@ -488,7 +488,7 @@ a {
         }
     }
 
-    p:not(.info p, .info-text p) {
+    p {
         font-size: 1.25rem;
         font-style: italic;
         font-family: 'GFS Didot', serif;
@@ -496,6 +496,12 @@ a {
         @media (max-width: 767.98px) {
             font-size: 1.125rem;
         }
+    }
+
+    .info p, .info-text p {
+        font-style: normal;
+        font-size: 1rem;
+        font-family: Open Sans,sans-serif;
     }
 
     .info {
@@ -525,6 +531,7 @@ a {
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
+    cursor: pointer;
 
     span {
         width: 50px;
