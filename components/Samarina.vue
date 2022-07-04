@@ -56,7 +56,7 @@
             </button>
 			<GmapMap :center="{lat: 10, lng: 10}" :options="options" id="map" ref="Map">
 				<GmapCluster :zoomOnClick="true" :styles="clusterStyles">
-					<GmapMarker
+					<GmapMarkerWithLabel
 						v-for="marker in samarina.metadata.locations" 
 						:key="marker.id" 
 						:position="{'lat':marker.lat, 'lng': marker.lon}"
@@ -108,9 +108,13 @@
 
 <script>
 import { gmapApi } from 'vue2-google-maps';
+import GmapMarkerWithLabel from './markerWithLabel.vue';
 
 export default {
 	props: ['obj-data', 'header-height'],
+	components: {
+		GmapMarkerWithLabel
+	},
 	data() {
 		return {
 			showInfoBox: false,
