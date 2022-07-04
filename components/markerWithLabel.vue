@@ -9,5 +9,5 @@
 </template>
 
 <script>
-export default (function (x) { return x.default || x })(require('/assets/markerWithLabel.js'))
+export default (function (x) { return x.default || x })(require('/assets/js/markerWithLabel.js'))
 </script>
