@@ -38,7 +38,8 @@ export default {
     { src: '~plugins/v-lazyload.js', ssr: false },
     { src: '~plugins/v-social-sharing.js', ssr: false },
     { src: '~plugins/v-select2.js', ssr: false },
-    { src: '~plugins/v-bootstrap-modal.js', ssr: false }
+    { src: '~plugins/v-bootstrap-modal.js', ssr: false },
+    { src: '~plugins/v-google-maps.js', ssr: false }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -82,6 +83,7 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    transpile: [/^vue2-google-maps($|\/)/]
   },
 
   router: {

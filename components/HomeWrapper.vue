@@ -2,7 +2,7 @@
 	<div>
 		<home-carousel :header-height="headerHeight" ref="home" :obj-data="objData"></home-carousel>
 		<sarmaniata ref="sarmaniata" :obj-data="objData"></sarmaniata>
-<!-- 		<samarina :header-height="headerHeight" ref="samarina" :obj-data="objData"></samarina> -->
+		<samarina :header-height="headerHeight" ref="samarina" :obj-data="objData"></samarina>
 		<events ref="events" :obj-data="objData"></events>
 		<photos ref="photos" :obj-data="objData"></photos>	
 		<the-footer ref="contact" :obj-data="objData" :logo="logo"></the-footer>
@@ -12,7 +12,7 @@
 <script>
 import HomeCarousel from '../components/HomeCarousel.vue';
 import Sarmaniata from '../components/Sarmaniata.vue';
-// import Samarina from '../components/Samarina.vue';
+import Samarina from '../components/Samarina.vue';
 import Events from '../components/Events.vue';
 import Photos from '../components/Photos.vue';
 import TheFooter from '../components/TheFooter.vue';
@@ -23,7 +23,7 @@ export default {
 	components: {
 		HomeCarousel,
 		Sarmaniata,
-		// Samarina,
+		Samarina,
 		Events,
 		Photos,
 		TheFooter

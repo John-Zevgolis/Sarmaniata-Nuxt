@@ -61,7 +61,6 @@ export default {
 			(this.$nuxt || EventBus || this.$EventBus).$emit('layout-complete');
 		},
 		layout() {
-			console.log('s')
             this.$refs.grid.layout('masonry');
             (this.$nuxt || EventBus || this.$EventBus).$emit('layout-complete');
         },
