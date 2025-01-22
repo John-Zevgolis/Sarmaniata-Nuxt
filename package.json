@@ -1,3 +1,4 @@
+
 {
   "name": "test",
   "version": "1.0.0",
@@ -45,7 +46,6 @@
   "devDependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
     "@nuxtjs/style-resources": "^1.2.1",
-    "fibers": "^5.0.1",
     "sass": "^1.53.0",
     "sass-loader": "^10.3.0"
   }
